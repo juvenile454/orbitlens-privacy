@@ -3,6 +3,7 @@
 Public, bilingual privacy policy for the Android app **OrbitLens** (`de.timo.orbitlens`).
 
 - Published site: <https://juvenile454.github.io/orbitlens-privacy/>
+- Published policy: OrbitLens 0.5.6, effective 30 August 2026
 - Privacy and support contact: `OrbitLens@web.de`
 - App source code, signing material and user data are **not** part of this repository.
 
