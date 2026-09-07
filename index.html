@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Datenschutzerklärung und Privacy Policy für OrbitLens 0.6.">
-  <title>OrbitLens – Datenschutzerklärung / Privacy Policy</title>
+  <meta name="description" content="Privacy Policy and Datenschutzerklärung for OrbitLens 0.6.">
+  <title>OrbitLens – Privacy Policy / Datenschutzerklärung</title>
   <style>
     :root { color-scheme: dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     body { margin: 0; background: #010b1f; color: #e4f9ff; line-height: 1.62; }
@@ -21,47 +21,8 @@
 </head>
 <body>
 <main>
-  <h1>OrbitLens – Datenschutzerklärung</h1>
-  <p class="meta">Gültig für OrbitLens 0.6 (<code>de.timo.orbitlens</code>) · Stand: 2. September 2026</p>
-  <p><strong>Entwickler und Verantwortlicher:</strong> Timo Lopetuso</p>
-  <p><strong>Datenschutz- und Supportkontakt:</strong> <a href="mailto:OrbitLens@web.de">OrbitLens@web.de</a></p>
-
-  <h2>Kurzfassung</h2>
-  <p>OrbitLens zeigt den GNSS-Satellitenstatus und berechnete Positionen weiterer Raumfahrzeuge. Exakte Koordinaten und GNSS-Empfängerbeobachtungen bleiben im Arbeitsspeicher und werden weder gespeichert noch übertragen. Die Kamera liefert nur eine lokale Vorschau; sie nimmt nichts auf und lädt nichts hoch.</p>
-  <p>Die App lädt öffentliche Bahnelemente von CelesTrak. Bei einem umlaufenden Wettersatelliten enthält die Bildanfrage eine aus dem Standort abgeleitete 5°-Rasterzelle von ungefähr 500 km Kantenlänge, nicht die exakten Koordinaten. Weil dies die einzige Übertragung ist, die etwas aus Ihrem Standort enthält, nennt OrbitLens vorher den Anbieter und die übertragenen Angaben und wartet auf „Bild laden“ — einmal je Dienst und App-Start. Jeder Netzwerkdienst erhält außerdem technisch IP-Adresse, Abrufzeit, angeforderte Ressource und OrbitLens-User-Agent und kann diese Angaben protokollieren.</p>
-
-  <h2>Berechtigungen und Zwecke</h2>
-  <ul>
-    <li><strong>Präziser und ungefährer Standort:</strong> nur im Vordergrund, um GNSS-Status, Richtungen, Entfernungen und magnetische Deklination zu bestimmen. Die Startseite hält aktuelle Empfängerdaten für einen verzögerungsfreien Wechsel zu den Liveansichten warm. Ungefährer Zugriff allein reicht für den GNSS-Satellitenstatus nicht aus.</li>
-    <li><strong>Kamera:</strong> erst beim Öffnen der Kameraansicht; ausschließlich lokale Livevorschau für das AR-Overlay.</li>
-    <li><strong>Internet:</strong> Abruf öffentlicher Bahnelemente und ausdrücklich angeforderter Satellitenbilder.</li>
-  </ul>
-  <p>OrbitLens fordert keine Hintergrundortung und keine Speicher- oder Medienberechtigung an.</p>
-
-  <h2>Netzwerkdienste und übertragene Daten</h2>
-  <ul>
-    <li><strong>CelesTrak:</strong> bis zu vier Gruppen öffentlicher Bahnelemente. Die Anfrage enthält keine Position, Empfängerbeobachtung oder von OrbitLens erzeugte Gerätekennung. Die angeforderte Gruppenadresse kann die verwendete App-Kategorie erkennen lassen. Starlink wird nur nach bewusster Auswahl geladen.</li>
-    <li><strong>NOAA, EUMETSAT und NASA:</strong> ein Satellitenbild nur nach ausdrücklicher Auswahl. Geostationäre Bildadressen sind für alle Personen gleich und enthalten nichts über Sie. Bei umlaufenden Wettersatelliten enthält die Anfrage eine 5°-Rasterzelle als ungefähren Standort; dieser Abruf wird erst nach einer unmittelbar vorgeschalteten Offenlegung und „Bild laden“ gesendet, die je Dienst einmal pro App-Start erscheint.</li>
-  </ul>
-  <p>Alle Verbindungen nutzen HTTPS. Die Dienste erhalten technisch IP-Adresse, Abrufzeit, angeforderte Ressource und den User-Agent <code>OrbitLens/0.6 (Android; personal satellite viewer)</code>. Sie können diese Angaben für Auslieferung, Statistik, Ratenbegrenzung oder Sicherheit protokollieren. OrbitLens enthält keine Werbung, kein Konto, keine Analyse- oder Crash-SDKs und verkauft keine Daten.</p>
-
-  <h2>Protokollierung durch externe Anbieter</h2>
-  <p>OrbitLens speichert diese Netzwerkmetadaten nicht selbst. Die Anbieter betreiben jedoch eigene Server und können Anfragen nach ihren Regeln aufbewahren. OrbitLens hat keinen Zugriff auf diese Protokolle, kontrolliert ihre Speicherdauer nicht und kann sie nicht löschen. Weitere Informationen: <a href="https://celestrak.org/usage-policy.php">CelesTrak Usage Policy</a>, <a href="https://www.noaa.gov/sites/default/files/legacy/document/2021/Mar/NOAAPrivacyPolicy_Final_May2017.pdf">NOAA Privacy Policy</a>, <a href="https://www.eumetsat.int/privacy-policy">EUMETSAT Privacy Policy</a> und <a href="https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_1382_0001_&amp;page_name=ALL">NASA Privacy Procedural Requirements</a>.</p>
-
-  <h2>Lokale Speicherung, Aufbewahrung und Löschung</h2>
-  <p>Gespeichert werden nur heruntergeladene öffentliche Bahnelemente und ihre Abrufzeit. Neuere Downloads ersetzen die vorherigen Dateien. Seit Version 0.5.1 wird ein manueller Kamera-Sichtfeldwert aus einer älteren OrbitLens-Version automatisch entfernt.</p>
-  <p>Standort, GNSS-Beobachtungen und Satellitenbilder werden von OrbitLens nicht auf Datenträger geschrieben. Android-Backup und Geräteübertragung sind deaktiviert. Mit „Speicherinhalt löschen“ in den Android-App-Einstellungen oder durch Deinstallation werden alle lokalen OrbitLens-Daten entfernt. Dies löscht keine Anbieterprotokolle. Es gibt kein OrbitLens-Konto und keine serverseitige OrbitLens-Nutzerdatenbank.</p>
-
-  <h2>Datenschutz für Kinder</h2>
-  <p>OrbitLens richtet sich nicht speziell an Kinder unter 13 Jahren und enthält weder Konto noch Werbung oder nutzergenerierte Inhalte. Falls Minderjährige die App verwenden, gilt für ihre Nutzung dieselbe oben beschriebene Datenverarbeitung; es findet keine altersbezogene Profilerstellung statt.</p>
-
-  <h2>Änderungen</h2>
-  <p>Wenn sich Datenverarbeitung, Berechtigungen oder Netzwerkdienste ändern, wird diese Erklärung zusammen mit der App aktualisiert. Die Versionsangabe oben zeigt, für welchen Stand sie gilt.</p>
-
-  <h2>Hosting dieser Seite</h2>
-  <p>Diese statische Datenschutzerklärung wird über GitHub Pages, einen Dienst der GitHub, Inc., bereitgestellt. Beim Aufruf verarbeitet GitHub technisch notwendige Verbindungsdaten wie IP-Adresse, Zeitpunkt und Browserinformationen, um die Seite auszuliefern und abzusichern. OrbitLens setzt auf dieser Seite keine eigenen Cookies, keine Analysewerkzeuge, keine externen Schriften und keine externen Skripte ein. Weitere Informationen enthält die <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</p>
-
-  <section class="language" lang="en">
+  <nav aria-label="Language selection"><a href="#english" lang="en">English</a> · <a href="#deutsch" lang="de">Deutsch</a></nav>
+  <section id="english" lang="en">
     <h1>OrbitLens – Privacy Policy</h1>
     <p class="meta">Applies to OrbitLens 0.6 (<code>de.timo.orbitlens</code>) · Effective: 2 September 2026</p>
     <p><strong>Developer and data controller:</strong> Timo Lopetuso</p>
@@ -101,6 +62,49 @@
 
     <h2>Hosting of this page</h2>
     <p>This static privacy policy is provided through GitHub Pages, a service of GitHub, Inc. When the page is requested, GitHub technically processes necessary connection data such as the IP address, request time and browser information to deliver and secure the page. OrbitLens uses no first-party cookies, analytics, external fonts or external scripts on this page. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a> for more information.</p>
+  </section>
+
+  <section id="deutsch" class="language" lang="de">
+    <h1>OrbitLens – Datenschutzerklärung</h1>
+    <p class="meta">Gültig für OrbitLens 0.6 (<code>de.timo.orbitlens</code>) · Stand: 2. September 2026</p>
+    <p><strong>Entwickler und Verantwortlicher:</strong> Timo Lopetuso</p>
+    <p><strong>Datenschutz- und Supportkontakt:</strong> <a href="mailto:OrbitLens@web.de">OrbitLens@web.de</a></p>
+
+    <h2>Kurzfassung</h2>
+    <p>OrbitLens zeigt den GNSS-Satellitenstatus und berechnete Positionen weiterer Raumfahrzeuge. Exakte Koordinaten und GNSS-Empfängerbeobachtungen bleiben im Arbeitsspeicher und werden weder gespeichert noch übertragen. Die Kamera liefert nur eine lokale Vorschau; sie nimmt nichts auf und lädt nichts hoch.</p>
+    <p>Die App lädt öffentliche Bahnelemente von CelesTrak. Bei einem umlaufenden Wettersatelliten enthält die Bildanfrage eine aus dem Standort abgeleitete 5°-Rasterzelle von ungefähr 500 km Kantenlänge, nicht die exakten Koordinaten. Weil dies die einzige Übertragung ist, die etwas aus Ihrem Standort enthält, nennt OrbitLens vorher den Anbieter und die übertragenen Angaben und wartet auf „Bild laden“ — einmal je Dienst und App-Start. Jeder Netzwerkdienst erhält außerdem technisch IP-Adresse, Abrufzeit, angeforderte Ressource und OrbitLens-User-Agent und kann diese Angaben protokollieren.</p>
+
+    <h2>Berechtigungen und Zwecke</h2>
+    <ul>
+      <li><strong>Präziser und ungefährer Standort:</strong> nur im Vordergrund, um GNSS-Status, Richtungen, Entfernungen und magnetische Deklination zu bestimmen. Die Startseite hält aktuelle Empfängerdaten für einen verzögerungsfreien Wechsel zu den Liveansichten warm. Ungefährer Zugriff allein reicht für den GNSS-Satellitenstatus nicht aus.</li>
+      <li><strong>Kamera:</strong> erst beim Öffnen der Kameraansicht; ausschließlich lokale Livevorschau für das AR-Overlay.</li>
+      <li><strong>Internet:</strong> Abruf öffentlicher Bahnelemente und ausdrücklich angeforderter Satellitenbilder.</li>
+    </ul>
+    <p>OrbitLens fordert keine Hintergrundortung und keine Speicher- oder Medienberechtigung an.</p>
+
+    <h2>Netzwerkdienste und übertragene Daten</h2>
+    <ul>
+      <li><strong>CelesTrak:</strong> bis zu vier Gruppen öffentlicher Bahnelemente. Die Anfrage enthält keine Position, Empfängerbeobachtung oder von OrbitLens erzeugte Gerätekennung. Die angeforderte Gruppenadresse kann die verwendete App-Kategorie erkennen lassen. Starlink wird nur nach bewusster Auswahl geladen.</li>
+      <li><strong>NOAA, EUMETSAT und NASA:</strong> ein Satellitenbild nur nach ausdrücklicher Auswahl. Geostationäre Bildadressen sind für alle Personen gleich und enthalten nichts über Sie. Bei umlaufenden Wettersatelliten enthält die Anfrage eine 5°-Rasterzelle als ungefähren Standort; dieser Abruf wird erst nach einer unmittelbar vorgeschalteten Offenlegung und „Bild laden“ gesendet, die je Dienst einmal pro App-Start erscheint.</li>
+    </ul>
+    <p>Alle Verbindungen nutzen HTTPS. Die Dienste erhalten technisch IP-Adresse, Abrufzeit, angeforderte Ressource und den User-Agent <code>OrbitLens/0.6 (Android; personal satellite viewer)</code>. Sie können diese Angaben für Auslieferung, Statistik, Ratenbegrenzung oder Sicherheit protokollieren. OrbitLens enthält keine Werbung, kein Konto, keine Analyse- oder Crash-SDKs und verkauft keine Daten.</p>
+
+    <h2>Protokollierung durch externe Anbieter</h2>
+    <p>OrbitLens speichert diese Netzwerkmetadaten nicht selbst. Die Anbieter betreiben jedoch eigene Server und können Anfragen nach ihren Regeln aufbewahren. OrbitLens hat keinen Zugriff auf diese Protokolle, kontrolliert ihre Speicherdauer nicht und kann sie nicht löschen. Weitere Informationen: <a href="https://celestrak.org/usage-policy.php">CelesTrak Usage Policy</a>, <a href="https://www.noaa.gov/sites/default/files/legacy/document/2021/Mar/NOAAPrivacyPolicy_Final_May2017.pdf">NOAA Privacy Policy</a>, <a href="https://www.eumetsat.int/privacy-policy">EUMETSAT Privacy Policy</a> und <a href="https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_1382_0001_&amp;page_name=ALL">NASA Privacy Procedural Requirements</a>.</p>
+
+    <h2>Lokale Speicherung, Aufbewahrung und Löschung</h2>
+    <p>Gespeichert werden nur heruntergeladene öffentliche Bahnelemente und ihre Abrufzeit. Neuere Downloads ersetzen die vorherigen Dateien. Seit Version 0.5.1 wird ein manueller Kamera-Sichtfeldwert aus einer älteren OrbitLens-Version automatisch entfernt.</p>
+    <p>Standort, GNSS-Beobachtungen und Satellitenbilder werden von OrbitLens nicht auf Datenträger geschrieben. Android-Backup und Geräteübertragung sind deaktiviert. Mit „Speicherinhalt löschen“ in den Android-App-Einstellungen oder durch Deinstallation werden alle lokalen OrbitLens-Daten entfernt. Dies löscht keine Anbieterprotokolle. Es gibt kein OrbitLens-Konto und keine serverseitige OrbitLens-Nutzerdatenbank.</p>
+
+    <h2>Datenschutz für Kinder</h2>
+    <p>OrbitLens richtet sich nicht speziell an Kinder unter 13 Jahren und enthält weder Konto noch Werbung oder nutzergenerierte Inhalte. Falls Minderjährige die App verwenden, gilt für ihre Nutzung dieselbe oben beschriebene Datenverarbeitung; es findet keine altersbezogene Profilerstellung statt.</p>
+
+    <h2>Änderungen</h2>
+    <p>Wenn sich Datenverarbeitung, Berechtigungen oder Netzwerkdienste ändern, wird diese Erklärung zusammen mit der App aktualisiert. Die Versionsangabe oben zeigt, für welchen Stand sie gilt.</p>
+
+    <h2>Hosting dieser Seite</h2>
+    <p>Diese statische Datenschutzerklärung wird über GitHub Pages, einen Dienst der GitHub, Inc., bereitgestellt. Beim Aufruf verarbeitet GitHub technisch notwendige Verbindungsdaten wie IP-Adresse, Zeitpunkt und Browserinformationen, um die Seite auszuliefern und abzusichern. OrbitLens setzt auf dieser Seite keine eigenen Cookies, keine Analysewerkzeuge, keine externen Schriften und keine externen Skripte ein. Weitere Informationen enthält die <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</p>
+
   </section>
 </main>
 </body>
