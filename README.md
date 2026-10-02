@@ -3,7 +3,7 @@
 Public, bilingual privacy policy for the Android app **OrbitLens** (`de.timo.orbitlens`).
 
 - Site: <https://juvenile454.github.io/orbitlens-privacy/>
-- Policy in `index.html`: **OrbitLens 1.0**, effective **12 September 2026**.
+- Policy in `index.html`: **OrbitLens 1.0 and 1.1**, updated **2 October 2026**.
 - Controller: Timo Lopetuso, Basler Straße 82, 79100 Freiburg, Germany
 - Privacy and support contact: `OrbitLens@web.de`
 - App source code, signing material and user data are **not** part of this repository.
