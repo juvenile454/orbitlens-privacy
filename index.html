@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Privacy Policy and Datenschutzerklärung for OrbitLens 1.0 and 1.1.">
+  <meta name="description" content="Privacy Policy and Datenschutzerklärung for OrbitLens 1.2, 1.1 and 1.0.">
   <title>OrbitLens – Privacy Policy / Datenschutzerklärung</title>
   <style>
     :root { color-scheme: dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
@@ -24,17 +24,19 @@
   <nav aria-label="Language selection"><a href="#english" lang="en">English</a> · <a href="#deutsch" lang="de">Deutsch</a></nav>
   <section id="english" lang="en">
     <h1>OrbitLens – Privacy Policy</h1>
-    <p class="meta">Applies to OrbitLens 1.0 and 1.1 (<code>de.timo.orbitlens</code>) · Updated: 2 October 2026</p>
+    <p class="meta">Applies to OrbitLens 1.2, 1.1 and 1.0 (<code>de.timo.orbitlens</code>) · Updated: 6 October 2026</p>
     <p><strong>Privacy and support contact:</strong> <a href="mailto:OrbitLens@web.de">OrbitLens@web.de</a></p>
 
-    <h2>Version 1.1 update</h2>
-    <p>Version 1.1 redesigns the home screen, introductory guidance and launch artwork. Permissions, network services, local storage and data handling are unchanged from 1.0. This policy also continues to cover existing 1.0 installations.</p>
+    <h2>Version 1.2 update</h2>
+    <p>Permissions, network services and the only location-derived transmission (the 5° grid cell for an orbiting weather satellite image) are unchanged from 1.1. Version 1.2 adds the Orbit globe, which is drawn from Earth imagery bundled with the app and loads no map tiles; it marks your position and centres on it when first shown. Orbital elements are now requested in CSV instead of TLE format and renewed per group once the held data is two hours old instead of twelve, also while the Orbit tab is open; after a timeout, dropped connection or server error, the app asks at most twice more within seconds. The app no longer bundles starting sets of orbital elements. Where versions differ, this policy says so; it continues to cover existing 1.0 and 1.1 installations.</p>
+    <p>Version 1.1 redesigned the home screen, introductory guidance and launch artwork without changing data handling from 1.0.</p>
 
     <h2>Summary</h2>
     <p>OrbitLens displays the GNSS satellite status and computed positions of other spacecraft. Exact coordinates and GNSS receiver observations remain in memory and are neither stored nor transmitted. The camera supplies a local preview only; it records and uploads nothing.</p>
     <p>The app downloads public orbital elements from CelesTrak. For an orbiting weather satellite, the image request contains a 5° grid cell of about 500 km derived from the position, not the exact coordinates. Because this is the only transmission carrying anything derived from your location, OrbitLens first names the provider and the transmitted data and waits for “Load image” — per service during the current app screen session. Each network service also technically receives the IP address, request time, requested resource and OrbitLens User-Agent and may log that data.</p>
 
     <p>The image disclosure confirmation is kept only in memory. Restarting the app or recreating its screen, for example after rotating the device, can require confirmation again.</p>
+    <p>From version 1.2, the Orbit globe can be centred on your position, either when it is first shown or via “Centre on my position”; that centre then corresponds to your coordinates. The globe view (centre, zoom and rotation) is kept only in memory, also across a device rotation. It is not saved as Android restore state or written to files, so it is gone once the app process ends, including when Android closes the app in the background. When no position is available any more, for example after the session ends, the app resets a view based on your position to a neutral view with the previous zoom. The view is not logged or transmitted.</p>
 
     <h2>Permissions and purposes</h2>
     <ul>
@@ -46,16 +48,16 @@
 
     <h2>Network services and transmitted data</h2>
     <ul>
-      <li><strong>CelesTrak:</strong> up to four groups of public orbital elements. Requests contain no position, receiver observation or OrbitLens-generated device identifier. The requested group address may reveal the app category being used. Starlink is fetched only after an explicit selection.</li>
+      <li><strong>CelesTrak:</strong> up to four groups of public orbital elements, each requested again at most every two hours while the app is open (versions 1.0 and 1.1: at most every twelve hours). Requests contain no position, receiver observation or OrbitLens-generated device identifier. The requested group address may reveal the app category being used. Starlink is fetched only after an explicit selection.</li>
       <li><strong>NOAA, EUMETSAT and NASA:</strong> one satellite image only after an explicit selection. Geostationary image addresses are identical for all users and contain nothing about you. Requests for orbiting weather satellites contain a 5° grid cell as approximate location; that request is sent only after an immediately preceding disclosure and “Load image”, shown per service during the current app screen session.</li>
     </ul>
-    <p>All connections use HTTPS. Services technically receive the IP address, request time, requested resource and User-Agent <code>OrbitLens/1.1 (Android; personal satellite viewer)</code> for version 1.1 (version 1.0 uses <code>OrbitLens/1.0</code>). They may log this data for delivery, statistics, rate limiting or security. OrbitLens has no advertising, account, analytics or crash-reporting SDK and does not sell data.</p>
+    <p>All connections use HTTPS. Services technically receive the IP address, request time, requested resource and User-Agent <code>OrbitLens/1.2 (Android; personal satellite viewer)</code> for version 1.2 (versions 1.1 and 1.0 use <code>OrbitLens/1.1</code> and <code>OrbitLens/1.0</code>). They may log this data for delivery, statistics, rate limiting or security. OrbitLens has no advertising, account, analytics or crash-reporting SDK and does not sell data.</p>
 
     <h2>Logging by external providers</h2>
     <p>OrbitLens does not store this network metadata itself. The providers operate their own servers and may retain requests under their policies. OrbitLens cannot access or delete these logs and does not control their retention. More information: <a href="https://celestrak.org/usage-policy.php">CelesTrak Usage Policy</a>, <a href="https://www.noaa.gov/sites/default/files/legacy/document/2021/Mar/NOAAPrivacyPolicy_Final_May2017.pdf">NOAA Privacy Policy</a>, <a href="https://www.eumetsat.int/privacy-policy">EUMETSAT Privacy Policy</a> and <a href="https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_1382_0001_&amp;page_name=ALL">NASA Privacy Procedural Requirements</a>.</p>
 
     <h2>Local storage, retention and deletion</h2>
-    <p>Downloaded public orbital elements and their retrieval time are stored. Newer successful downloads replace the previous files.</p>
+    <p>Downloaded public orbital elements and their retrieval time are stored. Newer successful downloads replace the previous files. The Earth imagery and object pictures shown in the app are part of the app package and are not downloaded.</p>
     <p>The filter selection (categories and constellations) is stored locally only when you tap the inactive save icon and is restored on future app starts. An empty selection can also be saved. Later filter changes are not saved automatically and do not overwrite the saved selection. The icon is active while the current selection matches the saved one. Tapping the active icon removes the saved filter without changing the current session selection; the next app start uses the default filter again. A later explicit save replaces the saved selection. This setting contains no location or receiver observations.</p>
     <p>Since OrbitLens 0.5.1, a manual camera field-of-view value left by an older version is removed automatically.</p>
     <p>Location, GNSS observations and satellite imagery are never written to storage by OrbitLens. Android backup and device transfer are disabled. Clearing OrbitLens storage in Android settings or uninstalling the app deletes all local OrbitLens data. This does not delete provider logs. There is no OrbitLens account or server-side OrbitLens user database.</p>
@@ -80,17 +82,19 @@
 
   <section id="deutsch" class="language" lang="de">
     <h1>OrbitLens – Datenschutzerklärung</h1>
-    <p class="meta">Gültig für OrbitLens 1.0 und 1.1 (<code>de.timo.orbitlens</code>) · Stand: 2. Oktober 2026</p>
+    <p class="meta">Gültig für OrbitLens 1.2, 1.1 und 1.0 (<code>de.timo.orbitlens</code>) · Stand: 6. Oktober 2026</p>
     <p><strong>Datenschutz- und Supportkontakt:</strong> <a href="mailto:OrbitLens@web.de">OrbitLens@web.de</a></p>
 
-    <h2>Aktualisierung für Version 1.1</h2>
-    <p>Version 1.1 überarbeitet Startseite, Einstiegshilfen und Startgrafik. Berechtigungen, Netzwerkdienste, lokale Speicherung und Datenverarbeitung bleiben gegenüber 1.0 unverändert. Diese Erklärung gilt weiterhin auch für bestehende 1.0-Installationen.</p>
+    <h2>Aktualisierung für Version 1.2</h2>
+    <p>Berechtigungen, Netzwerkdienste und die einzige standortabhängige Übertragung (die 5°-Rasterzelle beim Bild eines umlaufenden Wettersatelliten) bleiben gegenüber 1.1 unverändert. Version 1.2 ergänzt den Orbit-Globus, der aus mit der App gelieferten Erdbildern gezeichnet wird und keine Kartenkacheln lädt; er markiert Ihren Standort und zentriert sich beim ersten Erscheinen darauf. Bahnelemente werden jetzt im CSV- statt im TLE-Format abgerufen und je Gruppe erneuert, sobald die gehaltenen Daten zwei statt zwölf Stunden alt sind, auch während der Orbit-Reiter geöffnet ist; nach Zeitüberschreitung, Verbindungsabbruch oder Serverfehler fragt die App innerhalb weniger Sekunden höchstens zweimal erneut. Die App enthält keine mitgelieferten Startbestände von Bahnelementen mehr. Wo sich Versionen unterscheiden, ist das genannt; die Erklärung gilt weiterhin auch für bestehende 1.0- und 1.1-Installationen.</p>
+    <p>Version 1.1 hatte Startseite, Einstiegshilfen und Startgrafik überarbeitet, ohne die Datenverarbeitung gegenüber 1.0 zu ändern.</p>
 
     <h2>Kurzfassung</h2>
     <p>OrbitLens zeigt den GNSS-Satellitenstatus und berechnete Positionen weiterer Raumfahrzeuge. Exakte Koordinaten und GNSS-Empfängerbeobachtungen bleiben im Arbeitsspeicher und werden weder gespeichert noch übertragen. Die Kamera liefert nur eine lokale Vorschau; sie nimmt nichts auf und lädt nichts hoch.</p>
     <p>Die App lädt öffentliche Bahnelemente von CelesTrak. Bei einem umlaufenden Wettersatelliten enthält die Bildanfrage eine aus dem Standort abgeleitete 5°-Rasterzelle von ungefähr 500 km Kantenlänge, nicht die exakten Koordinaten. Weil dies die einzige Übertragung ist, die etwas aus Ihrem Standort enthält, nennt OrbitLens vorher den Anbieter und die übertragenen Angaben und wartet auf „Bild laden“ — je Dienst innerhalb der aktuellen App-Oberfläche. Jeder Netzwerkdienst erhält außerdem technisch IP-Adresse, Abrufzeit, angeforderte Ressource und OrbitLens-User-Agent und kann diese Angaben protokollieren.</p>
 
     <p>Die Bestätigung der Bild-Offenlegung bleibt nur im Arbeitsspeicher. Nach einem App-Neustart oder Neuaufbau der Oberfläche, zum Beispiel nach einer Gerätedrehung, kann die Bestätigung erneut erforderlich sein.</p>
+    <p>Ab Version 1.2 kann der Orbit-Globus auf Ihren Standort zentriert werden, beim ersten Erscheinen oder über „Auf meinen Standort zentrieren“; der Mittelpunkt entspricht dann Ihren Koordinaten. Die Globusansicht (Mittelpunkt, Zoom und Drehung) wird nur im Arbeitsspeicher gehalten, auch über eine Gerätedrehung hinweg. Sie wird weder als Android-Wiederherstellungszustand gesichert noch in Dateien geschrieben und ist deshalb weg, sobald der App-Prozess endet, auch wenn Android die App im Hintergrund beendet. Liegt kein Standort mehr vor, etwa nach dem Ende der Sitzung, setzt die App eine standortbezogene Ansicht auf eine neutrale Ansicht mit dem bisherigen Zoom zurück. Die Ansicht wird weder protokolliert noch übertragen.</p>
 
     <h2>Berechtigungen und Zwecke</h2>
     <ul>
@@ -102,16 +106,16 @@
 
     <h2>Netzwerkdienste und übertragene Daten</h2>
     <ul>
-      <li><strong>CelesTrak:</strong> bis zu vier Gruppen öffentlicher Bahnelemente. Die Anfrage enthält keine Position, Empfängerbeobachtung oder von OrbitLens erzeugte Gerätekennung. Die angeforderte Gruppenadresse kann die verwendete App-Kategorie erkennen lassen. Starlink wird nur nach bewusster Auswahl geladen.</li>
+      <li><strong>CelesTrak:</strong> bis zu vier Gruppen öffentlicher Bahnelemente, je Gruppe höchstens alle zwei Stunden erneut, solange die App geöffnet ist (Versionen 1.0 und 1.1: höchstens alle zwölf Stunden). Die Anfrage enthält keine Position, Empfängerbeobachtung oder von OrbitLens erzeugte Gerätekennung. Die angeforderte Gruppenadresse kann die verwendete App-Kategorie erkennen lassen. Starlink wird nur nach bewusster Auswahl geladen.</li>
       <li><strong>NOAA, EUMETSAT und NASA:</strong> ein Satellitenbild nur nach ausdrücklicher Auswahl. Geostationäre Bildadressen sind für alle Personen gleich und enthalten nichts über Sie. Bei umlaufenden Wettersatelliten enthält die Anfrage eine 5°-Rasterzelle als ungefähren Standort; dieser Abruf wird erst nach einer unmittelbar vorgeschalteten Offenlegung und „Bild laden“ gesendet, die je Dienst innerhalb der aktuellen App-Oberfläche erscheint.</li>
     </ul>
-    <p>Alle Verbindungen nutzen HTTPS. Die Dienste erhalten technisch IP-Adresse, Abrufzeit, angeforderte Ressource und den User-Agent <code>OrbitLens/1.1 (Android; personal satellite viewer)</code> für Version 1.1 (Version 1.0 verwendet <code>OrbitLens/1.0</code>). Sie können diese Angaben für Auslieferung, Statistik, Ratenbegrenzung oder Sicherheit protokollieren. OrbitLens enthält keine Werbung, kein Konto, keine Analyse- oder Crash-SDKs und verkauft keine Daten.</p>
+    <p>Alle Verbindungen nutzen HTTPS. Die Dienste erhalten technisch IP-Adresse, Abrufzeit, angeforderte Ressource und den User-Agent <code>OrbitLens/1.2 (Android; personal satellite viewer)</code> für Version 1.2 (die Versionen 1.1 und 1.0 verwenden <code>OrbitLens/1.1</code> beziehungsweise <code>OrbitLens/1.0</code>). Sie können diese Angaben für Auslieferung, Statistik, Ratenbegrenzung oder Sicherheit protokollieren. OrbitLens enthält keine Werbung, kein Konto, keine Analyse- oder Crash-SDKs und verkauft keine Daten.</p>
 
     <h2>Protokollierung durch externe Anbieter</h2>
     <p>OrbitLens speichert diese Netzwerkmetadaten nicht selbst. Die Anbieter betreiben jedoch eigene Server und können Anfragen nach ihren Regeln aufbewahren. OrbitLens hat keinen Zugriff auf diese Protokolle, kontrolliert ihre Speicherdauer nicht und kann sie nicht löschen. Weitere Informationen: <a href="https://celestrak.org/usage-policy.php">CelesTrak Usage Policy</a>, <a href="https://www.noaa.gov/sites/default/files/legacy/document/2021/Mar/NOAAPrivacyPolicy_Final_May2017.pdf">NOAA Privacy Policy</a>, <a href="https://www.eumetsat.int/privacy-policy">EUMETSAT Privacy Policy</a> und <a href="https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_1382_0001_&amp;page_name=ALL">NASA Privacy Procedural Requirements</a>.</p>
 
     <h2>Lokale Speicherung, Aufbewahrung und Löschung</h2>
-    <p>Gespeichert werden heruntergeladene öffentliche Bahnelemente und ihre Abrufzeit. Neuere erfolgreiche Downloads ersetzen die vorherigen Dateien.</p>
+    <p>Gespeichert werden heruntergeladene öffentliche Bahnelemente und ihre Abrufzeit. Neuere erfolgreiche Downloads ersetzen die vorherigen Dateien. Die in der App gezeigten Erdbilder und Objektbilder sind Teil des App-Pakets und werden nicht heruntergeladen.</p>
     <p>Die Filterauswahl (Kategorien und Konstellationen) wird nur beim Tippen auf das inaktive Speichersymbol lokal gespeichert und bei künftigen App-Starts wiederhergestellt. Auch eine leere Auswahl lässt sich speichern. Spätere Filteränderungen werden nicht automatisch gespeichert und überschreiben die gespeicherte Auswahl nicht. Das Symbol ist aktiv, solange die aktuelle Auswahl dem gespeicherten Stand entspricht. Ein Tipp auf das aktive Symbol entfernt den gespeicherten Filter, ohne die aktuelle Sitzungsauswahl zu ändern; der nächste App-Start verwendet wieder den Standardfilter. Ein späteres ausdrückliches Speichern ersetzt die gespeicherte Auswahl. Diese Einstellung enthält weder Standort noch Empfängerbeobachtungen.</p>
     <p>Seit OrbitLens 0.5.1 wird ein manueller Kamera-Sichtfeldwert aus einer älteren Version automatisch entfernt.</p>
     <p>Standort, GNSS-Beobachtungen und Satellitenbilder werden von OrbitLens nicht auf Datenträger geschrieben. Android-Backup und Geräteübertragung sind deaktiviert. Mit „Speicherinhalt löschen“ in den Android-App-Einstellungen oder durch Deinstallation werden alle lokalen OrbitLens-Daten entfernt. Dies löscht keine Anbieterprotokolle. Es gibt kein OrbitLens-Konto und keine serverseitige OrbitLens-Nutzerdatenbank.</p>
