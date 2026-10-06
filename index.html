@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Privacy Policy and Datenschutzerklärung for OrbitLens 1.2, 1.1 and 1.0.">
+  <meta name="description" content="Privacy Policy and Datenschutzerklärung for OrbitLens 1.2.1, 1.2, 1.1 and 1.0.">
   <title>OrbitLens – Privacy Policy / Datenschutzerklärung</title>
   <style>
     :root { color-scheme: dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
@@ -24,8 +24,11 @@
   <nav aria-label="Language selection"><a href="#english" lang="en">English</a> · <a href="#deutsch" lang="de">Deutsch</a></nav>
   <section id="english" lang="en">
     <h1>OrbitLens – Privacy Policy</h1>
-    <p class="meta">Applies to OrbitLens 1.2, 1.1 and 1.0 (<code>de.timo.orbitlens</code>) · Updated: 6 October 2026</p>
+    <p class="meta">Applies to OrbitLens 1.2.1, 1.2, 1.1 and 1.0 (<code>de.timo.orbitlens</code>) · Updated: 6 October 2026</p>
     <p><strong>Privacy and support contact:</strong> <a href="mailto:OrbitLens@web.de">OrbitLens@web.de</a></p>
+
+    <h2>Version 1.2.1 update</h2>
+    <p>Computed objects such as the ISS no longer wait for a GPS fix. While the receiver has no current fix, OrbitLens uses the location Android already knows from Wi-Fi or the mobile network, or the system’s last known location if it is at most 15 minutes old. Android determines this location itself under your system location settings; OrbitLens transmits nothing for it and, as before, neither stores nor sends exact coordinates. Permissions, network services and the only location-derived transmission are unchanged from 1.2.</p>
 
     <h2>Version 1.2 update</h2>
     <p>Permissions, network services and the only location-derived transmission (the 5° grid cell for an orbiting weather satellite image) are unchanged from 1.1. Version 1.2 adds the Orbit globe, which is drawn from Earth imagery bundled with the app and loads no map tiles; it marks your position and centres on it when first shown. Orbital elements are now requested in CSV instead of TLE format and renewed per group once the held data is two hours old instead of twelve, also while the Orbit tab is open; after a timeout, dropped connection or server error, the app asks at most twice more within seconds. The app no longer bundles starting sets of orbital elements. Where versions differ, this policy says so; it continues to cover existing 1.0 and 1.1 installations.</p>
@@ -51,7 +54,7 @@
       <li><strong>CelesTrak:</strong> up to four groups of public orbital elements, each requested again at most every two hours while the app is open (versions 1.0 and 1.1: at most every twelve hours). Requests contain no position, receiver observation or OrbitLens-generated device identifier. The requested group address may reveal the app category being used. Starlink is fetched only after an explicit selection.</li>
       <li><strong>NOAA, EUMETSAT and NASA:</strong> one satellite image only after an explicit selection. Geostationary image addresses are identical for all users and contain nothing about you. Requests for orbiting weather satellites contain a 5° grid cell as approximate location; that request is sent only after an immediately preceding disclosure and “Load image”, shown per service during the current app screen session.</li>
     </ul>
-    <p>All connections use HTTPS. Services technically receive the IP address, request time, requested resource and User-Agent <code>OrbitLens/1.2 (Android; personal satellite viewer)</code> for version 1.2 (versions 1.1 and 1.0 use <code>OrbitLens/1.1</code> and <code>OrbitLens/1.0</code>). They may log this data for delivery, statistics, rate limiting or security. OrbitLens has no advertising, account, analytics or crash-reporting SDK and does not sell data.</p>
+    <p>All connections use HTTPS. Services technically receive the IP address, request time, requested resource and User-Agent <code>OrbitLens/1.2.1 (Android; personal satellite viewer)</code> for version 1.2.1 (versions 1.2, 1.1 and 1.0 use <code>OrbitLens/1.2</code>, <code>OrbitLens/1.1</code> and <code>OrbitLens/1.0</code>). They may log this data for delivery, statistics, rate limiting or security. OrbitLens has no advertising, account, analytics or crash-reporting SDK and does not sell data.</p>
 
     <h2>Logging by external providers</h2>
     <p>OrbitLens does not store this network metadata itself. The providers operate their own servers and may retain requests under their policies. OrbitLens cannot access or delete these logs and does not control their retention. More information: <a href="https://celestrak.org/usage-policy.php">CelesTrak Usage Policy</a>, <a href="https://www.noaa.gov/sites/default/files/legacy/document/2021/Mar/NOAAPrivacyPolicy_Final_May2017.pdf">NOAA Privacy Policy</a>, <a href="https://www.eumetsat.int/privacy-policy">EUMETSAT Privacy Policy</a> and <a href="https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_1382_0001_&amp;page_name=ALL">NASA Privacy Procedural Requirements</a>.</p>
@@ -82,8 +85,11 @@
 
   <section id="deutsch" class="language" lang="de">
     <h1>OrbitLens – Datenschutzerklärung</h1>
-    <p class="meta">Gültig für OrbitLens 1.2, 1.1 und 1.0 (<code>de.timo.orbitlens</code>) · Stand: 6. Oktober 2026</p>
+    <p class="meta">Gültig für OrbitLens 1.2.1, 1.2, 1.1 und 1.0 (<code>de.timo.orbitlens</code>) · Stand: 6. Oktober 2026</p>
     <p><strong>Datenschutz- und Supportkontakt:</strong> <a href="mailto:OrbitLens@web.de">OrbitLens@web.de</a></p>
+
+    <h2>Aktualisierung für Version 1.2.1</h2>
+    <p>Berechnete Objekte wie die ISS warten nicht mehr auf einen GPS-Fix. Solange der Empfänger keinen aktuellen Fix hat, verwendet OrbitLens den Standort, den Android bereits über WLAN oder Mobilfunk kennt, oder den zuletzt bekannten Standort des Systems, wenn er höchstens 15 Minuten alt ist. Diesen Standort ermittelt Android selbst nach Ihren Standorteinstellungen; OrbitLens überträgt dafür nichts und speichert oder sendet exakte Koordinaten wie bisher nicht. Berechtigungen, Netzwerkdienste und die einzige standortabhängige Übertragung bleiben gegenüber 1.2 unverändert.</p>
 
     <h2>Aktualisierung für Version 1.2</h2>
     <p>Berechtigungen, Netzwerkdienste und die einzige standortabhängige Übertragung (die 5°-Rasterzelle beim Bild eines umlaufenden Wettersatelliten) bleiben gegenüber 1.1 unverändert. Version 1.2 ergänzt den Orbit-Globus, der aus mit der App gelieferten Erdbildern gezeichnet wird und keine Kartenkacheln lädt; er markiert Ihren Standort und zentriert sich beim ersten Erscheinen darauf. Bahnelemente werden jetzt im CSV- statt im TLE-Format abgerufen und je Gruppe erneuert, sobald die gehaltenen Daten zwei statt zwölf Stunden alt sind, auch während der Orbit-Reiter geöffnet ist; nach Zeitüberschreitung, Verbindungsabbruch oder Serverfehler fragt die App innerhalb weniger Sekunden höchstens zweimal erneut. Die App enthält keine mitgelieferten Startbestände von Bahnelementen mehr. Wo sich Versionen unterscheiden, ist das genannt; die Erklärung gilt weiterhin auch für bestehende 1.0- und 1.1-Installationen.</p>
@@ -109,7 +115,7 @@
       <li><strong>CelesTrak:</strong> bis zu vier Gruppen öffentlicher Bahnelemente, je Gruppe höchstens alle zwei Stunden erneut, solange die App geöffnet ist (Versionen 1.0 und 1.1: höchstens alle zwölf Stunden). Die Anfrage enthält keine Position, Empfängerbeobachtung oder von OrbitLens erzeugte Gerätekennung. Die angeforderte Gruppenadresse kann die verwendete App-Kategorie erkennen lassen. Starlink wird nur nach bewusster Auswahl geladen.</li>
       <li><strong>NOAA, EUMETSAT und NASA:</strong> ein Satellitenbild nur nach ausdrücklicher Auswahl. Geostationäre Bildadressen sind für alle Personen gleich und enthalten nichts über Sie. Bei umlaufenden Wettersatelliten enthält die Anfrage eine 5°-Rasterzelle als ungefähren Standort; dieser Abruf wird erst nach einer unmittelbar vorgeschalteten Offenlegung und „Bild laden“ gesendet, die je Dienst innerhalb der aktuellen App-Oberfläche erscheint.</li>
     </ul>
-    <p>Alle Verbindungen nutzen HTTPS. Die Dienste erhalten technisch IP-Adresse, Abrufzeit, angeforderte Ressource und den User-Agent <code>OrbitLens/1.2 (Android; personal satellite viewer)</code> für Version 1.2 (die Versionen 1.1 und 1.0 verwenden <code>OrbitLens/1.1</code> beziehungsweise <code>OrbitLens/1.0</code>). Sie können diese Angaben für Auslieferung, Statistik, Ratenbegrenzung oder Sicherheit protokollieren. OrbitLens enthält keine Werbung, kein Konto, keine Analyse- oder Crash-SDKs und verkauft keine Daten.</p>
+    <p>Alle Verbindungen nutzen HTTPS. Die Dienste erhalten technisch IP-Adresse, Abrufzeit, angeforderte Ressource und den User-Agent <code>OrbitLens/1.2.1 (Android; personal satellite viewer)</code> für Version 1.2.1 (die Versionen 1.2, 1.1 und 1.0 verwenden <code>OrbitLens/1.2</code>, <code>OrbitLens/1.1</code> beziehungsweise <code>OrbitLens/1.0</code>). Sie können diese Angaben für Auslieferung, Statistik, Ratenbegrenzung oder Sicherheit protokollieren. OrbitLens enthält keine Werbung, kein Konto, keine Analyse- oder Crash-SDKs und verkauft keine Daten.</p>
 
     <h2>Protokollierung durch externe Anbieter</h2>
     <p>OrbitLens speichert diese Netzwerkmetadaten nicht selbst. Die Anbieter betreiben jedoch eigene Server und können Anfragen nach ihren Regeln aufbewahren. OrbitLens hat keinen Zugriff auf diese Protokolle, kontrolliert ihre Speicherdauer nicht und kann sie nicht löschen. Weitere Informationen: <a href="https://celestrak.org/usage-policy.php">CelesTrak Usage Policy</a>, <a href="https://www.noaa.gov/sites/default/files/legacy/document/2021/Mar/NOAAPrivacyPolicy_Final_May2017.pdf">NOAA Privacy Policy</a>, <a href="https://www.eumetsat.int/privacy-policy">EUMETSAT Privacy Policy</a> und <a href="https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_1382_0001_&amp;page_name=ALL">NASA Privacy Procedural Requirements</a>.</p>
